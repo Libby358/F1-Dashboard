@@ -1,4 +1,5 @@
-﻿namespace F1_Dashboard.Models
+﻿using System;
+namespace F1_Dashboard.Models
 {
     public class LapData  // ✅ Ensure it's public
     {
@@ -8,5 +9,7 @@
         public string Sector2 { get; set; }
         public string Sector3 { get; set; }
         public string PitStop { get; set; }
+        public string DriverName { get; set; }
+        public string LapTime { get; set; }
     }
 }

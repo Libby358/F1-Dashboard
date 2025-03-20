@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="F1_Dashboard.Views.SessionStatus"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:viewmodels="clr-namespace:F1_Dashboard.ViewModels">
+    <UserControl.DataContext>
+        <viewmodels:SessionStatusViewModel />
+    </UserControl.DataContext>
+
+    <Grid>
+        <ListView ItemsSource="{Binding SessionStatuses}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Session Type" DisplayMemberBinding="{Binding SessionType}" Width="150"/>
+                    <GridViewColumn Header="Time Remaining" DisplayMemberBinding="{Binding TimeRemaining}" Width="120"/>
+                    <GridViewColumn Header="Session Status" DisplayMemberBinding="{Binding SessionStatusActive}" Width="120"/>
+                    <GridViewColumn Header="Flag Status" DisplayMemberBinding="{Binding FlagStatus}" Width="120"/>
+                    <GridViewColumn Header="Safety Car Status" DisplayMemberBinding="{Binding SafetyCarStatus}" Width="150"/>
+                    <GridViewColumn Header="Pit Lane Status" DisplayMemberBinding="{Binding PitLaneStatus}" Width="150"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</UserControl>

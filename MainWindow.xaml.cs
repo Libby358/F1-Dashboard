@@ -1,6 +1,7 @@
 ﻿using F1_Dashboard.ViewModels;
 using System;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace F1_Dashboard
 {
@@ -14,7 +15,7 @@ namespace F1_Dashboard
                 InitializeComponent();
 
                 // Set the ViewModel as the DataContext
-                this.DataContext = new MainWindowViewModel(); // Set the view model for data binding
+                this.DataContext = new MainWindowViewModel();
                 Console.WriteLine("DataContext set to MainWindowViewModel.");
 
                 // Default page is already set in ViewModel, no need to set ContentFrame here

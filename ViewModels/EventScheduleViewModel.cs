@@ -1,28 +1,29 @@
 ﻿using System.Collections.ObjectModel;
-using System.Threading.Tasks;
-using F1_Dashboard.Models;
-using F1_Dashboard.Services;
 
 namespace F1_Dashboard.ViewModels
 {
-    public class EventScheduleViewModel : ViewModelBase
+    public class EventScheduleViewModel
     {
-        private ObservableCollection<Event> _events;
-        public ObservableCollection<Event> Events
-        {
-            get { return _events; }
-            set { _events = value; OnPropertyChanged(nameof(Events)); }
-        }
+        public ObservableCollection<EventModel> Events { get; set; }
 
         public EventScheduleViewModel()
         {
-            LoadEvents();
-        }
-
-        private async void LoadEvents()
-        {
-            var eventList = await ApiService.GetEventSchedule();
-            Events = new ObservableCollection<Event>(eventList);
+            Events = new ObservableCollection<EventModel>
+            {
+                new EventModel { Name = "Monaco GP", Country = "Monaco", Location = "Monte Carlo", Date = "26 May 2024", StartTime = "14:00" },
+                new EventModel { Name = "British GP", Country = "UK", Location = "Silverstone", Date = "7 July 2024", StartTime = "15:00" }
+            };
         }
     }
+
+    public class EventModel
+    {
+        public string Name { get; set; }
+        public string Country { get; set; }
+        public string Location { get; set; }
+        public string Date { get; set; }
+        public string StartTime { get; set; }
+    }
 }
+
+

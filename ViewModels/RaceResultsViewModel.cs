@@ -3,7 +3,7 @@ using System.Collections.ObjectModel;
 
 namespace F1_Dashboard.ViewModels
 {
-    public class ResultsViewModel : ViewModelBase
+    public class RaceResultsViewModel : ViewModelBase
     {
         private ObservableCollection<RaceResult> _raceResults;
         public ObservableCollection<RaceResult> RaceResults
@@ -12,7 +12,7 @@ namespace F1_Dashboard.ViewModels
             set { _raceResults = value; OnPropertyChanged(nameof(RaceResults)); }
         }
 
-        public ResultsViewModel()
+        public RaceResultsViewModel()
         {
             RaceResults = new ObservableCollection<RaceResult>
             {

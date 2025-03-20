@@ -5,13 +5,14 @@ using System.Windows.Controls;
 
 namespace F1_Dashboard.Views
 {
-    public partial class RaceResults : UserControl
+    public partial class SessionStatus : UserControl
     {
-        public RaceResults()
+        public SessionStatus()
         {
             InitializeComponent(); // Initializes the page components
-            DataContext = new RaceResultsViewModel(); // Bind the view model to the page
+            DataContext = new SessionStatusViewModel(); // Bind the view model to the page
         }
     }
 }
+
 

@@ -1,0 +1,53 @@
+﻿<UserControl x:Class="F1_Dashboard.Views.Telemetry"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:viewmodels="clr-namespace:F1_Dashboard.ViewModels"
+             xmlns:models="clr-namespace:F1_Dashboard.Models"
+             x:Name="TelemetryControl">
+
+    <!-- Set DataContext in the code-behind -->
+    <UserControl.DataContext>
+        <viewmodels:TelemetryViewModel Year="2024" Round="1" />
+    </UserControl.DataContext>
+
+    <Grid>
+        <TextBlock Text="Telemetry" FontSize="18" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10"/>
+
+        <!-- ListView for Telemetry -->
+        <ListView ItemsSource="{Binding TelemetryData}">
+            <ListView.View>
+                <GridView>
+                    <!-- Speed -->
+                    <GridViewColumn Header="Speed" DisplayMemberBinding="{Binding Speed}" Width="150"/>
+
+                    <!-- Throttle Position -->
+                    <GridViewColumn Header="Throttle Position" DisplayMemberBinding="{Binding ThrottlePosition}" Width="180"/>
+
+                    <!-- Brake Pressure -->
+                    <GridViewColumn Header="Brake Pressure" DisplayMemberBinding="{Binding BrakePressure}" Width="150"/>
+
+                    <!-- Gear -->
+                    <GridViewColumn Header="Gear" DisplayMemberBinding="{Binding Gear}" Width="100"/>
+
+                    <!-- Engine RPM -->
+                    <GridViewColumn Header="Engine RPM" DisplayMemberBinding="{Binding EngineRPM}" Width="150"/>
+
+                    <!-- Tire Temperatures -->
+                    <GridViewColumn Header="Tire Temperatures" DisplayMemberBinding="{Binding TireTemperatures}" Width="180"/>
+
+                    <!-- Fuel Remaining -->
+                    <GridViewColumn Header="Fuel Remaining" DisplayMemberBinding="{Binding FuelRemaining}" Width="150"/>
+
+                    <!-- G Force -->
+                    <GridViewColumn Header="G Force" DisplayMemberBinding="{Binding GForce}" Width="120"/>
+
+                    <!-- Lap Time Comparison -->
+                    <GridViewColumn Header="Lap Time Comparison" DisplayMemberBinding="{Binding LapTimeComparison}" Width="180"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</UserControl>
+
+
+

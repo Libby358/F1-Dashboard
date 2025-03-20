@@ -1,21 +1,18 @@
-﻿using System;
+﻿using F1_Dashboard.ViewModels;
+using System;
 using System.Windows;
+using System.Windows.Controls;
 
-namespace F1_Dashboard
+namespace F1_Dashboard.Views
 {
-    /// <summary>
-    /// Interaction logic for EventSchedule.xaml
-    /// </summary>
-    public partial class EventSchedule : Window  // ✅ Change 'MainWindow' to 'EventSchedule'
+    public partial class EventSchedule : UserControl
     {
         public EventSchedule()
         {
-            InitializeComponent();
-        }
-
-        private void InitializeComponent()
-        {
-            throw new NotImplementedException();
+            InitializeComponent(); // Initializes the page components
+            DataContext = new EventScheduleViewModel(); // Bind the view model to the page
         }
     }
 }
+
+

@@ -58,12 +58,37 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Models\RaceControlMessage.cs" />
+    <Compile Include="Models\SessionStatus.cs" />
+    <Compile Include="Models\TelemetryData.cs" />
+    <Compile Include="Models\TrackMarkers.cs" />
+    <Compile Include="Models\TrackStatus.cs" />
     <Compile Include="RelayCommand.cs" />
     <Compile Include="Services\ApiService.cs" />
     <Compile Include="ViewModels\EventScheduleViewModel.cs" />
     <Compile Include="MainWindowViewModel.cs" />
+    <Compile Include="ViewModels\RaceControlMessageViewModel.cs" />
     <Compile Include="ViewModels\RaceResultsViewModel.cs" />
+    <Compile Include="ViewModels\SessionStatusViewModel.cs" />
+    <Compile Include="ViewModels\TelemetryViewModel.cs" />
+    <Compile Include="ViewModels\TrackMarkersViewModel.cs" />
+    <Compile Include="ViewModels\TrackStatusViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
+    <Compile Include="Views\TrackMarkers.xaml.cs">
+      <DependentUpon>TrackMarkers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Telemetry.xaml.cs">
+      <DependentUpon>Telemetry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RaceControlMessage.xaml.cs">
+      <DependentUpon>RaceControlMessage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SessionStaus.xaml.cs">
+      <DependentUpon>SessionStaus.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TrackStatus.xaml.cs">
+      <DependentUpon>TrackStatus.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\EventSchedule.xaml.cs">
       <DependentUpon>EventSchedule.xaml</DependentUpon>
     </Compile>
@@ -82,6 +107,26 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\TrackMarkers.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Telemetry.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\RaceControlMessage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SessionStaus.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\TrackStatus.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\EventSchedule.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

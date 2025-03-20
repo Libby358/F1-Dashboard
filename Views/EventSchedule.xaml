@@ -1,6 +1,6 @@
-﻿<Page x:Class="F1_Dashboard.Views.EventSchedule"
-      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+﻿<UserControl x:Class="F1_Dashboard.Views.EventSchedule"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Grid>
         <ListView ItemsSource="{Binding Events}">
             <ListView.View>
@@ -14,4 +14,5 @@
             </ListView.View>
         </ListView>
     </Grid>
-</Page>
+</UserControl>
+

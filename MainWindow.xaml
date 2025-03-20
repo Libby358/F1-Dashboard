@@ -11,18 +11,27 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="250"/>
+            <!-- Sidebar width -->
             <ColumnDefinition Width="*"/>
+            <!-- Dynamic content area -->
         </Grid.ColumnDefinitions>
 
-        <!-- Sidebar -->
+        <!-- Sidebar Navigation -->
         <StackPanel Background="#2C3E50" Width="250">
             <Button Content="Event Schedule" Command="{Binding NavigateCommand}" CommandParameter="EventSchedule"/>
             <Button Content="Race Results" Command="{Binding NavigateCommand}" CommandParameter="RaceResults"/>
-            <!-- Add other buttons here as needed -->
+            <Button Content="Track Status" Command="{Binding NavigateCommand}" CommandParameter="TrackStatus"/>
+            <Button Content="Session Status" Command="{Binding NavigateCommand}" CommandParameter="SessionStatus"/>
+            <Button Content="Race Control Messages" Command="{Binding NavigateCommand}" CommandParameter="RaceControlMessages"/>
+            <Button Content="Telemetry" Command="{Binding NavigateCommand}" CommandParameter="Telemetry"/>
+            <Button Content="Track Markers" Command="{Binding NavigateCommand}" CommandParameter="TrackMarkers"/>
         </StackPanel>
 
-        <!-- Content Area -->
+        <!-- Dynamic Page Content -->
         <ContentControl Grid.Column="1" Content="{Binding CurrentPage}"/>
     </Grid>
 </Window>
+
+
+
 

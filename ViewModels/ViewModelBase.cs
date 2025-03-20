@@ -1,8 +1,9 @@
-﻿using System.ComponentModel;
+﻿using System.Windows;
+using System.ComponentModel;
 
 namespace F1_Dashboard.ViewModels
 {
-    public class BaseViewModel : INotifyPropertyChanged
+    public class ViewModelBase : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -12,3 +13,4 @@ namespace F1_Dashboard.ViewModels
         }
     }
 }
+

@@ -13,5 +13,13 @@ namespace F1_Dashboard
     /// </summary>
     public partial class App : Application
     {
+        [STAThread]
+        public static void Main()
+        {
+            App app = new App();
+            MainWindow mainWindow = new MainWindow();
+            app.Run(mainWindow); // Ensure the MainWindow is opened
+        }
     }
+
 }

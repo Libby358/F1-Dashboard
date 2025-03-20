@@ -1,11 +1,10 @@
 ﻿using F1_Dashboard.Models;
-using F1Dashboard.Models;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace F1Dashboard.Services
+namespace F1_Dashboard.Services
 {
     public class ApiService
     {

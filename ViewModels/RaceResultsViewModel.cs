@@ -1,8 +1,7 @@
 ﻿using F1_Dashboard.Models;
-using F1Dashboard.Models;
 using System.Collections.ObjectModel;
 
-namespace F1Dashboard.ViewModels
+namespace F1_Dashboard.ViewModels
 {
     public class ResultsViewModel : ViewModelBase
     {

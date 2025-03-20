@@ -1,4 +1,4 @@
-﻿namespace F1Dashboard.Models
+﻿namespace F1_Dashboard.Models
 {
     public class RaceResult
     {

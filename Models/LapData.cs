@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace F1_Dashboard.Models
+﻿namespace F1_Dashboard.Models
 {
-    internal class LapData
+    public class LapData  // ✅ Ensure it's public
     {
+        public string Driver { get; set; }
+        public int LapNumber { get; set; }
+        public string Sector1 { get; set; }
+        public string Sector2 { get; set; }
+        public string Sector3 { get; set; }
+        public string PitStop { get; set; }
     }
 }

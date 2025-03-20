@@ -1,9 +1,9 @@
 ﻿using System.Collections.ObjectModel;
 using System.Threading.Tasks;
-using F1Dashboard.Models;
-using F1Dashboard.Services;
+using F1_Dashboard.Models;
+using F1_Dashboard.Services;
 
-namespace F1Dashboard.ViewModels
+namespace F1_Dashboard.ViewModels
 {
     public class EventScheduleViewModel : ViewModelBase
     {
